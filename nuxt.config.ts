@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      htmlAttrs: { lang: "en" },
       title: "Waradu",
       meta: [
         { charset: "utf-8" },
