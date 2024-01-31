@@ -33,6 +33,7 @@
 
 <script lang="ts" setup>
 useHead({
+  title: "Projects",
   meta: [
     { name: "theme-color", content: "#161616" }
   ]

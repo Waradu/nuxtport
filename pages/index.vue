@@ -212,6 +212,14 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'Home',
+      meta: [
+        { name: 'theme-color', content: '#000000' }
+      ],
+    };
+  },
   mounted() {
     const mainElement = document.querySelector(".main");
 
@@ -226,6 +234,6 @@ export default {
       mainElement.style.setProperty("--cursor-x", xPercent + "%");
       mainElement.style.setProperty("--cursor-y", yPercent + "%");
     });
-  }
+  },
 }
 </script>
