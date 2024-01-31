@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         {
           hid: "description",
           name: "description",
-          content: "My Portfolio website",
+          content: "Waradu's Portfolio",
         },
       ],
       script:
