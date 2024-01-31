@@ -1,35 +1,35 @@
 <template>
-  <div class="main">
-    <h1>Waradu</h1>
-    <p class="desc">Developer and Designer</p>
-    <div class="projects">
-      My Work
-      <div class="arrow">&rarr;</div>
+  <div class="index">
+    <div class="main">
+      <h1>Waradu</h1>
+      <p class="desc">Developer and Designer</p>
+      <NuxtLink to="/projects" class="projects_link">
+        My Work
+        <div class="arrow">&rarr;</div>
+      </NuxtLink>
     </div>
-  </div>
-  <div class="footer">
-    <a target="_blank" href="https://github.com/waradu" class="link">Github
-      <div class="preview gh">
-        <div class="img"></div>
-      </div>
-    </a>
-    <a target="_blank" href="https://youtube.com/@waradu" class="link">YouTube
-      <div class="preview yt">
-        <div class="img"></div>
-      </div>
-    </a>
-    <a target="_blank" href="https://discord.gg/yG2zF7yDfk" class="link">Discord
-      <div class="preview dc">
-        <div class="img"></div>
-      </div>
-    </a>
+    <div class="footer">
+      <a target="_blank" href="https://github.com/waradu" class="link">Github
+        <div class="preview gh">
+          <div class="img"></div>
+        </div>
+      </a>
+      <a target="_blank" href="https://youtube.com/@waradu" class="link">YouTube
+        <div class="preview yt">
+          <div class="img"></div>
+        </div>
+      </a>
+      <a target="_blank" href="https://discord.gg/yG2zF7yDfk" class="link">Discord
+        <div class="preview dc">
+          <div class="img"></div>
+        </div>
+      </a>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-html,
-body,
-#__nuxt {
+.index {
   width: 100%;
   height: 100%;
   background-color: black;
@@ -50,21 +50,21 @@ body,
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-  
+
     --cursor-x: center;
     --cursor-y: center;
-  
+
     h1,
     .desc,
-    .projects {
+    .projects_link {
       z-index: 1;
     }
-  
+
     h1 {
       font-size: 60px;
       letter-spacing: 2px;
     }
-  
+
     .desc {
       color: #fff;
       opacity: 0.7;
@@ -72,8 +72,8 @@ body,
       margin-bottom: 5px;
       font-weight: 300;
     }
-  
-    .projects {
+
+    .projects_link {
       cursor: pointer;
       padding: 8px;
       padding-inline: 20px;
@@ -82,12 +82,14 @@ body,
       display: flex;
       gap: 10px;
       transition: .2s;
-  
+      color: white;
+      text-decoration: none;
+
       &:hover {
         gap: 20px;
       }
     }
-  
+
     &::before {
       content: "";
       position: absolute;
@@ -95,24 +97,24 @@ body,
       height: 100%;
       top: 0;
       left: 0;
-  
+
       background-image: url(~/assets/img/bg.jpg);
       background-size: cover;
       z-index: -1;
       -webkit-filter: saturate(150%);
       filter: saturate(150%);
       opacity: 0.7;
-  
+
       -webkit-mask-image: url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg);
       mask-image: url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg);
-  
+
       -webkit-mask-position: 50% 50%;
       mask-position: 50% 50%;
-  
+
       -webkit-mask-repeat: repeat, repeat, repeat, repeat, repeat, repeat;
       mask-repeat: repeat, repeat, repeat, repeat, repeat, repeat;
     }
-  
+
     &::after {
       content: "";
       position: absolute;
@@ -120,9 +122,9 @@ body,
       height: 100%;
       top: 0;
       left: 0;
-  
+
       z-index: 0;
-  
+
       background-image: radial-gradient(circle at var(--cursor-x) var(--cursor-y), transparent, black 70%);
     }
   }
@@ -171,20 +173,21 @@ body,
         }
       }
 
-      .gh > .img {
+      .gh>.img {
         background-image: url("~/assets/img/gh.jpg");
       }
 
-      .yt > .img {
+      .yt>.img {
         background-image: url("~/assets/img/yt.jpg");
       }
 
-      .dc > .img {
+      .dc>.img {
         background-image: url("~/assets/img/dc.jpg");
       }
 
       &:hover {
         color: white;
+
         .preview {
           scale: 1 1;
           translate: -50% 0;
