@@ -38,6 +38,10 @@ useHead({
     { name: "theme-color", content: "#161616" }
   ]
 })
+
+onMounted(() => {
+  document.documentElement.style.backgroundColor = "#161616";
+})
 </script>
 
 <style lang="scss">
@@ -71,4 +75,5 @@ useHead({
   letter-spacing: 1px;
   color: #ffffff80;
   padding-inline: 0px;
-}</style>
+}
+</style>

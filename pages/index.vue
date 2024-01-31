@@ -234,5 +234,7 @@ onMounted(() => {
     mainElement.style.setProperty("--cursor-x", xPercent + "%");
     mainElement.style.setProperty("--cursor-y", yPercent + "%");
   });
+
+  document.documentElement.style.backgroundColor = "#000000";
 })
 </script>
