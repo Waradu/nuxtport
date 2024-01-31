@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/image','@nuxtjs/sitemap'
+    '@nuxtjs/sitemap'
   ],
   devtools: { enabled: true },
   app: {

@@ -101,7 +101,7 @@ body,
       z-index: -1;
       -webkit-filter: saturate(150%);
       filter: saturate(150%);
-      opacity: 0.8;
+      opacity: 0.7;
   
       -webkit-mask-image: url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg);
       mask-image: url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg);
