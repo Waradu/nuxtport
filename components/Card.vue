@@ -1,20 +1,26 @@
 <template>
-  <div class="card-wrapper">
+  <div class="card-wrapper" v-on:click="full = full ? false : true" :class="{ full: false }">
     <div class="card">
-      <img :src="'/projects/' + image" alt="" loading="lazy">
+      <NuxtImg :src="'/projects/' + image" alt="" v-on:click="full = full ? true : false" />
       <div class="text">
         <div class="title">{{ title }}</div>
         <div class="description">{{ description }}</div>
       </div>
     </div>
-    <NuxtLink v-if="haslink == 1" class="link" :to="link">Go to {{ title }} <div class="arrow" style="rotate: -45deg;">&rarr;</div>
+    <NuxtLink v-if="haslink == 1" class="link" :to="link">Go to {{ title }} <div class="arrow" style="rotate: -45deg;">
+        &rarr;</div>
     </NuxtLink>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  props: ["image", "title", "description", "link", "haslink"]
+  props: ["image", "title", "description", "link", "haslink"],
+  data() {
+    return {
+      full: false
+    }
+  }
 }
 </script>
 
@@ -30,6 +36,23 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  &.full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 15%;
+    padding-inline: 30%;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
 
   .card {
     overflow: hidden;
@@ -70,6 +93,7 @@ export default {
     }
 
     &::after {
+      pointer-events: none;
       display: block;
       content: "";
       z-index: 0;
@@ -99,6 +123,15 @@ export default {
     &:hover {
       gap: 10px;
       background-color: #2c2c2c;
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .card-wrapper {
+    &.full {
+      padding: 30%;
+      padding-inline: 15%;
     }
   }
 }

@@ -25,7 +25,7 @@
     <Card title="EDU" description="Manage all your homework, tests, grades and notes in one place (Stopped)"
       image="edu.jpg" haslink=0 />
     <Card title="Xtensions" description="Manage all your extensions with profiles and a clean UI" image="xtensions.jpg"
-      link="https//xtensions.waradu.dev/" haslink=1 />
+      link="https://xtensions.waradu.dev/" haslink=1 />
   </div>
 
   <div class="more">More comming soon ...</div>
