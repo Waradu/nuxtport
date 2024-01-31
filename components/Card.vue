@@ -1,7 +1,7 @@
 <template>
   <div class="card-wrapper" v-on:click="full = full ? false : true" :class="{ full: false }">
     <div class="card">
-      <NuxtImg :src="'/projects/' + image" alt="" v-on:click="full = full ? true : false" />
+      <NuxtImg :src="'/projects/' + image" alt="" v-on:click="full = full ? true : false" loading="lazy" />
       <div class="text">
         <div class="title">{{ title }}</div>
         <div class="description">{{ description }}</div>
