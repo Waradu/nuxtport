@@ -210,30 +210,29 @@
 }
 </style>
 
-<script>
-export default {
-  head() {
-    return {
-      title: 'Home',
-      meta: [
-        { name: 'theme-color', content: '#000000' }
-      ],
-    };
-  },
-  mounted() {
-    const mainElement = document.querySelector(".main");
+<script lang="ts" setup>
+useHead({
+  title: "Home",
+  meta: [
+    { name: "theme-color", content: "#000000" }
+  ]
+})
 
-    mainElement.addEventListener("mousemove", (e) => {
-      const rect = mainElement.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+onMounted(() => {
+  const mainElement = document.querySelector<HTMLObjectElement>(".main");
 
-      const xPercent = (x / rect.width) * 100;
-      const yPercent = (y / rect.height) * 100;
+  if (mainElement == null) return;
 
-      mainElement.style.setProperty("--cursor-x", xPercent + "%");
-      mainElement.style.setProperty("--cursor-y", yPercent + "%");
-    });
-  },
-}
+  mainElement.addEventListener("mousemove", (e: MouseEvent) => {
+    const rect = mainElement.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const xPercent = (x / rect.width) * 100;
+    const yPercent = (y / rect.height) * 100;
+
+    mainElement.style.setProperty("--cursor-x", xPercent + "%");
+    mainElement.style.setProperty("--cursor-y", yPercent + "%");
+  });
+})
 </script>
