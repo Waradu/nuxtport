@@ -77,7 +77,7 @@
       cursor: pointer;
       padding: 8px;
       padding-inline: 20px;
-      background-color: #3f343aaa;
+      background-color: #3b3b3baa;
       border-radius: 10px;
       display: flex;
       gap: 10px;
@@ -101,9 +101,9 @@
       background-image: url(~/assets/img/bg.jpg);
       background-size: cover;
       z-index: -1;
-      -webkit-filter: saturate(150%);
-      filter: saturate(150%);
-      opacity: 0.7;
+      -webkit-filter: saturate(100%);
+      filter: saturate(100%);
+      opacity: 0.6;
 
       -webkit-mask-image: url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg);
       mask-image: url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg), url(~/assets/img/grid.svg);
@@ -152,9 +152,9 @@
         transform-origin: center bottom;
         scale: .8 0;
         transition: .2s ease-in-out;
-        border-radius: 10px;
-        background: #ffffffaa;
-        border: 2px solid #ffffffcc;
+        border-radius: 12px;
+        background: #ffffff60;
+        border: 2px solid #ffffff60;
         position: absolute;
         left: 50%;
         translate: -50% 20px;
@@ -167,9 +167,8 @@
           height: 100%;
           background-size: 100%;
           border-radius: 5px;
-          margin: 5px;
-          opacity: .9;
-          box-shadow: 0 0 5px #000;
+          margin: 7px;
+          box-shadow: 0 0 7px #000000aa;
         }
       }
 
