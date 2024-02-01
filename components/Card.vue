@@ -7,7 +7,7 @@
         <div class="description">{{ description }}</div>
       </div>
     </div>
-    <NuxtLink v-if="haslink == 1" class="link" :to="link">Go to {{ title }} <div class="arrow" style="rotate: -45deg;">
+    <NuxtLink v-if="haslink == '1'" class="link" :to="link">Go to {{ title }} <div class="arrow" style="rotate: -45deg;">
         &rarr;</div>
     </NuxtLink>
   </div>
@@ -15,7 +15,13 @@
 
 <script lang="ts">
 export default {
-  props: ["image", "title", "description", "link", "haslink"],
+  props: {
+    image: String,
+    title: String,
+    description: String,
+    link: String,
+    haslink: String
+  },
   data() {
     return {
       full: false
