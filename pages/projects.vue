@@ -8,8 +8,8 @@
         link="https://egg.waradu.dev" haslink=1 />
       <Card title="Epilogue.social" description="A new spezial social media platform" image="eds.jpg"
         link="https://epilogue.social" haslink=1 />
-      <Card title="MCEdit" description="Modern 2D skin editor cuz i like it more that way" image="editor.jpeg"
-        link="https://editor.waradu.dev" haslink=1 />
+      <Card title="Skin Viewer" description="Modern skin viewer" image="skin.png"
+        link="https://skin.waradu.dev/" haslink=1 />
       <Card title="r/placeCH" description="Developer and Mod at PlaceCH ready to manage to next r/place" image="placech.jpg"
         link="https://dsc.gg/placeCH" haslink=1 />
       <Card title="Watchtower" description="Fraud detection in posts and chats, like never seen before (In dev)"
