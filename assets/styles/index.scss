@@ -191,3 +191,27 @@
     }
   }
 }
+
+.construction {
+  margin-bottom: 40px;
+  margin-top: -60px;
+  background-color: rgba($color: #ffffff, $alpha: 0.1);
+  border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 100;
+  padding-inline: 12px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 1.5;
+  position: fixed;
+  top: 100px;
+  z-index: 1000;
+
+  .small {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba($color: #ffffff, $alpha: 0.6);
+  }
+}

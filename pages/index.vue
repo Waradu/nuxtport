@@ -1,5 +1,9 @@
 <template>
   <div class="index">
+    <div class="construction">
+      Temporary Portfolio<br />
+      <div class="small">Site Under Construction</div>
+    </div>
     <div class="main">
       <h1>Waradu</h1>
       <p class="desc">Developer and Designer</p>
@@ -9,17 +13,20 @@
       </NuxtLink>
     </div>
     <div class="footer">
-      <a target="_blank" href="https://github.com/waradu" class="link">Github
+      <a target="_blank" href="https://github.com/waradu" class="link"
+        >Github
         <div class="preview gh">
           <div class="img"></div>
         </div>
       </a>
-      <a target="_blank" href="https://youtube.com/@waradu" class="link">YouTube
+      <a target="_blank" href="https://youtube.com/@waradu" class="link"
+        >YouTube
         <div class="preview yt">
           <div class="img"></div>
         </div>
       </a>
-      <a target="_blank" href="https://discord.gg/yG2zF7yDfk" class="link">Discord
+      <a target="_blank" href="https://discord.gg/yG2zF7yDfk" class="link"
+        >Discord
         <div class="preview dc">
           <div class="img"></div>
         </div>
@@ -29,16 +36,14 @@
 </template>
 
 <style lang="scss">
-@use '~/assets/styles';
+@use "~/assets/styles/index.scss";
 </style>
 
 <script lang="ts" setup>
 useHead({
   title: "Home",
-  meta: [
-    { name: "theme-color", content: "#000000" }
-  ]
-})
+  meta: [{ name: "theme-color", content: "#000000" }],
+});
 
 onMounted(() => {
   const mainElement = document.querySelector<HTMLObjectElement>(".main");
@@ -58,5 +63,5 @@ onMounted(() => {
   });
 
   document.documentElement.style.backgroundColor = "#000000";
-})
+});
 </script>
